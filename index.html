@@ -5,22 +5,36 @@
 	<title>Git Documentation</title>
 </head>
 <body>
+	<nav id="navbar">
+		<header>Git Documentation</header>
+		<ul>
+			<li><a class="nav-link" href="#Git">Git</a></li>
+			<li><a class="nav-link" href="#Features_of_Git">Features of Git</a></li>
+			<li><a class="nav-link" href="#Basic_Terminology">Basic Terminology</a></li>
+			<li><a class="nav-link" href="#Basic_Commands">Basic Commands</a></li>
+			<li><a class="nav-link" href="#Git_Clean_Sheet">Git Clean Sheet</a></li>
+			<li><a class="nav-link" href="#Video_Crash_Course">Video Crash Course</a></li>
+		</ul>
+	</nav>
+
 	<main id="main-doc">
-		<section class="main-section">
-			<header><h2>What is Git?</h2></header>
-			<main><p>
+
+		<section class="main-section" id="Git">
+			<header ><h2>Git</h2></header>
+			<main>
+				<p>
 				Git is an open-source distributed version control system. It is designed to handle minor to major projects with high speed and efficiency. It is developed to co-ordinate the work among the developers. The version control allows us to track and work together with our team members at the same workspace.
 
-Git is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git services. Git can be used privately and publicly.
+				Git is foundation of many services like GitHub and GitLab, but we can use Git without using any other Git services. Git can be used privately and publicly.
 
-Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also used as an important distributed version-control tool for the DevOps.
-			</p>
-			<img src="https://guides.github.com/activities/hello-world/branching.png" width="100%">
-		</main>
+				Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also used as an important distributed version-control tool for the DevOps.
+				</p>
+				<img src="https://guides.github.com/activities/hello-world/branching.png" width="100%">
+			</main>
 		</section>
 
-		<section class="main-section">
-			<header><h2>Features of Git</h2></header>
+		<section class="main-section" id="Features_of_Git">
+			<header ><h2>Features of Git</h2></header>
 			<main>
 			<ul>	
 				<li>Open Source</li>
@@ -38,7 +52,7 @@ Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also us
 			</main>
 		</section>	
 
-		<section class="main-section">
+		<section class="main-section" id="Basic_Terminology">
 			<header><h2>Basic Terminology</h2></header>
 			<main>
 				<h3>Repository:</h3>
@@ -66,29 +80,52 @@ Git was created by Linus Torvalds in 2005 to develop Linux Kernel. It is also us
 				<h3>Pull/ Pull Request:</h3>
 				<p>The term Pull is used to receive data from GitHub. It fetches and merges changes on the remote server to your working directory. The git pull command is used to make a Git pull.
 
-Pull requests are a process for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch.</p>
-			<h3>Push:</h3>
-			<p>The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.</p>
-			<h3>Remote:</h3>
-			<p>In Git, the term remote is concerned with the remote repository. It is a shared repository that all team members use to exchange their changes. A remote repository is stored on a code hosting service like an internal server, GitHub, Subversion and more.</p>
-			<h3>Upstream and Downstream</h3>
-			<p>The term upstream and downstream is a reference of the repository. Generally, upstream is where you cloned the repository from (the origin) and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.</p>
+				Pull requests are a process for a developer to notify team members that they have completed a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch.</p>
+				<h3>Push:</h3>
+				<p>The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.</p>
+				<h3>Remote:</h3>
+				<p>In Git, the term remote is concerned with the remote repository. It is a shared repository that all team members use to exchange their changes. A remote repository is stored on a code hosting service like an internal server, GitHub, Subversion and more.</p>
+				<h3>Upstream and Downstream</h3>
+				<p>The term upstream and downstream is a reference of the repository. Generally, upstream is where you cloned the repository from (the origin) and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.</p>
+				<h3>Fork</h3>
+				<p>A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project.
+				Great use of using forks to propose changes for bug fixes.</p>
 			</main>
-			<h3>Fork</h3>
-			<p>A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project.
-
-Great use of using forks to propose changes for bug fixes.</p>
 		</section>
-	
 
-		<section class="main-section">
+		<section class="main-section" id="Basic_Commands">
+			<header><h2>Basic Commands</h2></header>
+			<main>
+				<h3>1. git init</h3>
+				<p>he very first thing you need to do is to initialize your project folder to use git.
+ 					We do this by using the git init command.</p>
+				<code id="code">$ git init</code>
+				<h3>2. git clone</h3>
+				<p>git clone helps you to clone a repository from a remote location like Github, Gitlab, Bitbucket, etc.</p>
+				<code id="code">$ git clone <:remote-url:></code>
+				<h3>3. git add</h3>
+				<p>to add the changes you have made to the git system</p>
+				<code>$ git add <:file name:></code>
+				<h3>4. git commit</h3>
+				<p>Git commit is like setting a checkpoint in the development process which you can go back to later if needed.</p>
+				<code>$ git commit -m "commit message"</code>
+				<h3>5. git push</h3>
+				<p>git push updates the remote repository with any commits made locally to a branch</p>
+				<code>$ git push origin <: branch-name-you-have made commits on:></code>
+				<h3>6. git pull</h3>
+				<p>git pull update the local repository with updates from its remote counterpart, i.e. remote repository.</p>	
+				<code>$ git pull <:remote></code>
+			</main>
+		</section>
+
+		<section class="main-section" id="Git_Clean_Sheet">
 			<header><h2>Git Clean Sheet</h2></header>
 			<main>
 				<img src="https://raw.githubusercontent.com/hbons/git-cheat-sheet/master/preview.png" width="100%">
 			</main>
 		</section>		
 
-		<section class="main-section">
+		<section class="main-section" id="Video_Crash_Course">
 			<header><h2>Video Crash Course</h2></header>
 			<main>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/RGOj5yH7evk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
